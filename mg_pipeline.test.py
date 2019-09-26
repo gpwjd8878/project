@@ -11,7 +11,6 @@ def help():
 
 def main(s1):
         print '---QC---'
-#        os.system('fastqc -t 2 --nogroup -o ./ %s_1.fastq %s_2.fastq' % (s1,s1))
         os.system('fastqc -t 2 --nogroup -o ./ {sample}_1.fastq {sample}_2.fastq'.format(sample=s1))
 
         print '---trimming---'
