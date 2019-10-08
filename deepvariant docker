@@ -1,3 +1,4 @@
+
 docker run [options] [image] [bash]
 
 # docker ps -a : container check
@@ -20,3 +21,5 @@ docker run [options] [image] [bash]
 ' --output_vcf=[output-PATH] '
 ' --output_gvcf=[output-PATH] '
 ' --num_shards=1 ' # cpu core num 1
+
+
