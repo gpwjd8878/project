@@ -1,0 +1,22 @@
+docker run [options] [image] [bash]
+
+# docker ps -a : container check
+# docker stop 'docker name' : stop 'docker'
+# docker rm 'docker name' : remove 'docker'
+# docker start 'docker name' : restart 'docker'
+# exit
+# docker exec -it 'name' "bash" : restatr 'docker'
+
+
+
+' docker run -w / -it --name [] ' #variant name set # -w : start directory
+' -v /[PATH]/:/input ' # input file directory path
+' -v /[PATH]/:/output ' # output file directory path
+' gcr.io/deepvariant-docker/deepvariant:0.8.0 ' # docker image names
+' /opt/deepvariant/bin/run_deepvariant ' # deepvariant main command
+' --model_type=WES ' # WES or WGS
+' --ref=[ref-PATH] ' # reference file in input path
+' --reads=[bam-PATH] ' # bamfile in input path
+' --output_vcf=[output-PATH] '
+' --output_gvcf=[output-PATH] '
+' --num_shards=1 ' # cpu core num 1
