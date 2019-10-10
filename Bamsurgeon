@@ -1,0 +1,20 @@
+
+● SNV to existing BAM alignments (addsnv)
+
+addsnv.py -v [varfile] -f [bamfile] -r [reference] -o [output] --picardfar [picardjar] --seed [seed number]
+
+# Varfile = Target regions to try and add a SNV, as BED
+# Bamfile = sam/bam file from which to obtain reads
+# reference = reference genome, fasta indexed with bwa index and samtools faidx
+# picardjar = path to picard.jar, required for most aligners
+# seed = seed random number generation
+
+=> Output consists of a BAM file containing the spike-in mutations and a directory of log files
+describing which bases were changed in which reads (one log per mutation) and the local assemblies 
+for each region where a mutation was made.
+  
+  output logfile can be transformed info VCF format using thr script makevcf.py 
+
+makevcf.py [logfile]
+
+
